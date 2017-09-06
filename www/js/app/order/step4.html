@@ -1,0 +1,38 @@
+<ion-view title="Заказ оформлен" id="page11">
+    <ion-content padding="true" class="has-header">
+        <h4 id="page11-heading7" style="color:#000000;">Ожидайте звонка оператора</h4>
+        <ion-list id="page3-list2" class="manual-list-fullwidth">
+            <ion-item class="item-avatar item-icon-right positive" id="page3-list-item8" ng-repeat="order in orders">
+                <img src="common/img/7fklneEaRAOSOcdo7XkX_bottle1_3.jpg">
+                <h2positive>{{order.name}}
+
+                    <p>({{order.count}} шт.) {{order.price}} руб. </p>
+                </h2positive>
+            </ion-item>
+
+        </ion-list>
+        <h4 style="color:#000000;"> Вы можете ввести промокод</h4>
+        <form name="promoForm" id="page9-form4" class="list">
+            <label class="item item-input" id="page9-input8">
+                <span class="input-label">Промо код</span>
+                <input type="text" placeholder="" ng-model="user.promo">
+            </label>
+        </form>
+        <div style="margin-right:-20px;">
+            <a ng-click="activatePromo(user)" id="page3-button1" style="left:-10px;border-radius:0px 0px 0px 0px;"
+               class="button button-positive  button-full">Активировать промокод</a>
+        </div>
+        <!--<h4 id="page11-heading8" style="color:#000000;">Вы можете оплатить с карты</h4>-->
+        <!--<form id="page11-form5" class="list">-->
+        <!--<label class="item item-input" id="page11-input9">-->
+        <!--<span class="input-label">Номер карты</span>-->
+        <!--<input type="text" placeholder="">-->
+        <!--</label>-->
+        <!--<label class="item item-input" id="page11-input10">-->
+        <!--<span class="input-label">Имя на карте</span>-->
+        <!--<input type="text" placeholder="">-->
+        <!--</label>-->
+        <!--</form>-->
+        <!--<button id="page11-button9" class="button button-positive  button-block">Оплатить заказ с карты</button>-->
+    </ion-content>
+</ion-view>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="468f208c-1d8e-479b-9ad1-c89484996c6a" name="audio" url="http://ftp.vt-host.co.ua">
+        <fileTransfer host="ftp.vt-host.co.ua" port="21" username="audio.project.vt-host.co.ua@vt-host.co.ua">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="21" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

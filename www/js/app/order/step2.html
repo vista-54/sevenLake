@@ -1,0 +1,29 @@
+<ion-view title="Адрес заказа" id="page7">
+    <ion-content padding="true" class="has-header">
+        <form name="addressForm" id="page7-form2" class="list">
+            <!--<label class="item item-input" id="page7-input2">-->
+                <!--<span class="input-label">Ваш город</span>-->
+                <!--<input name="city" ng-model="user._city" type="text" placeholder="Казань" required>-->
+            <!--</label>-->
+            <span ng-show="addressForm.city.$invalid&&addressForm.city.$touched">Город не может быть пустым</span>
+            <label class="item item-input" id="page7-input4">
+                <span class="input-label">Улица</span>
+                <input name="street" ng-model="user._street" type="text" placeholder="Четаева" required>
+            </label>
+            <span ng-show="addressForm.street.$invalid&&addressForm.street.$touched">Улица не заполнена</span>
+            <label class="item item-input" id="page7-input6">
+                <span class="input-label">Дом</span>
+                <input name="house" ng-model="user._house" type="text" placeholder="4" required>
+            </label>
+            <span ng-show="addressForm.house.$invalid&&addressForm.house.$touched">Номер дома не заполнен</span>
+            <label class="item item-input" id="page7-input5">
+                <span class="input-label">Квартира/офис</span>
+                <input ng-model="user._flat" type="text" placeholder="">
+            </label>
+        </form>
+        <a id="page7-button3" class="button button-positive  button-block" ng-click="goToStepThree(addressForm,user)">Продолжить</a>
+        <div id="page7-markdown3" style="color:#000000;">
+            <p ng-click="getCurrentPosition()">Геолокация города улицы номера дома</p>
+        </div>
+    </ion-content>
+</ion-view>

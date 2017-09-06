@@ -1,0 +1,15 @@
+<ion-view title="Контактные данные"  hide-back-button="{{!isLogged}}">
+    <ion-content padding="true" class="has-header">
+        <form name="numForm" class="list">
+            <label class="item item-input">
+                <span class="input-label">Введите ваш телефон</span>
+                <input name="phone" minlength="12" required ng-model="user.number" type="tel" placeholder="">
+            </label>
+            <label ng-if="!numberFieldisEmpty" class="item item-input" id="page6-input11">
+                <span class="input-label">Введите код из смс</span>
+                <input type="text" name="smsCode" ng-model="user.code" placeholder="">
+            </label>
+            <a ng-click="goToStepTwo(numForm,user)" id="page6-button2" class="button button-positive  button-block">Продолжить</a>
+        </form>
+    </ion-content>
+</ion-view>

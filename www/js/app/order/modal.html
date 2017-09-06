@@ -1,0 +1,18 @@
+<script id="modal.html" type="text/ng-template">
+    <ion-modal-view>
+        <ion-header-bar>
+            <h1 class="title">Внимание!</h1>
+        </ion-header-bar>
+        <ion-content class="has-footer">
+            <div>
+                Необходимо купить бутыль для воды!
+            </div>
+            <label>
+                <input type="checkbox" ng-checked="clientHaveABottle()"> у меня уже есть бутыль 7 озер
+            </label>
+            <div><a ng-click="closeModal()">Назад</a></div>
+        </ion-content>
+
+
+    </ion-modal-view>
+</script>

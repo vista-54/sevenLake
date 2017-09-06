@@ -1,0 +1,61 @@
+<ion-view title="Ваш заказ" id="page9">
+    <ion-content padding="true" class=" manual-remove-top-padding has-header">
+        <!--<div id="page9-markdown4" style="color:#000000;">-->
+        <h4 id="page11-heading7" style="color:#000000;">Ожидайте звонка оператора</h4>
+        <ion-list id="page3-list2" class="manual-list-fullwidth">
+            <ion-item class="item-avatar item-icon-right positive" id="page3-list-item8" ng-repeat="order in orders">
+                <img src="common/img/7fklneEaRAOSOcdo7XkX_bottle1_3.jpg">
+                <h2positive>{{order.name}}
+
+                    <p>({{order.count}} шт.) {{order.price}} руб. </p>
+                </h2positive>
+            </ion-item>
+        </ion-list>
+        <h4 style="color:#000000;"> Вы можете ввести промокод</h4>
+        <form name="promoForm" id="page9-form4" class="list">
+            <label class="item item-input" id="page9-input8">
+                <span class="input-label">Промо код</span>
+                <input type="text" placeholder="" ng-model="user.promo">
+            </label>
+        </form>
+        <div style="">
+            <a ng-click="activatePromo(user)" id="page3-button1" style="border-radius:0px 0px 0px 0px;"
+               class="button button-positive  button-full">Активировать промокод</a>
+        </div>
+
+        <!--</div>-->
+        <!--<div ng-hide="socialHidden">-->
+            <!--<div id="page9-markdown7" style="color:#000000;">-->
+                <!--<p>Вы можете поделиться в соц сети покупкой и получить бесплатную замену бутыли в подарок!</p>-->
+            <!--</div>-->
+            <!--<button id="page9-button4" class="button button-balanced  button-block icon ion-social-facebook"-->
+                    <!--ng-click="share('fb')"> Поделиться в Facebook-->
+            <!--</button>-->
+            <!--<button id="page9-button5" class="button button-balanced  button-block icon ion-social-twitter"-->
+                    <!--ng-click="share('vk')"> Поделиться Вконтакте-->
+            <!--</button>-->
+        <!--</div>-->
+        <form name="feedbackForm" ng-if="feedbackIsShow">
+            <h4 style="text-align: center;    margin-top: 20px;    margin-bottom: 5px;">Оцените нашу работу</h4>
+            <div rating style="    margin: 5px 0;"></div>
+            <!--<p><textarea style="border: 1px solid black;width: 100%" rows="10" placeholder="Ваш отзыв..."></textarea>-->
+            <!--</p>-->
+            <!--<ion-item>-->
+            <!--<ion-label>Long Description</ion-label>-->
+            <ion-item>
+                <!--<ion-label>Comments</ion-label>-->
+                <textarea placeholder="Введите ваш комментарий к отзыву" name="feedback" ng-model="feedback.msg"
+                          rows="4" style="width: 100%; resize: none;" required></textarea>
+
+            </ion-item>
+            <!--<span ng-show="feedbackForm.feedback.$invalid&&feedbackForm.feedback.$touched">Отзыв не может быть пустой</span>-->
+            <!--</ion-item>-->
+
+
+        </form>
+        <button id="page9-button5" class="button button-balanced  button-block"
+                ng-click="sendFeedback()"> Оставить отзыв
+        </button>
+        <!--<a ng-click="goToStepFour(user)" id="page9-button6" class="button button-positive  button-block">Оформить заказ</a>-->
+    </ion-content>
+</ion-view>

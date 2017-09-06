@@ -1,0 +1,82 @@
+<ion-view title="{{$root.isLogged?'Пригласи друга':'Вход'}}" id="page10">
+
+    <ion-content ng-show="$root.isLogged" class="has-header">
+        <div style="background: rgb(238,243,247);
+    padding: 10px;">
+
+
+            <!--<h2 id="page10-heading3" style="color:#000000;">Условия акции</h2>-->
+            <div style="text-align: center;    margin-top: 20px;">
+                <!--<img alt="bottle" style="height: 50px" src="common/img/7fklneEaRAOSOcdo7XkX_bottle1_3.png"><span style="    vertical-align: top;-->
+                <!--padding: 0px 0 0 12px;-->
+                <!--top: 11px;-->
+                <!--position: relative;">x</span> <i class="ion-ios-people" style="margin: 0 0 0 12px;font-size: 50px;color: rgb(75, 153, 229);"></i>-->
+                <img width="60%" alt="image" src="common/img/image.png">
+            </div>
+            <h3 style="text-align: center;">Бесплатная вода для вас и ваших друзей</h3>
+            <div id="page10-markdown5" style="color:#000000;">
+                <p style="text-align: center;">Поделитесь промо кодом с вашими друзьями и 7 Озер подарит каждому из них
+                    бесплатную замену бутыли
+                    после первого заказа. Как только друг сделает заказ вы тоже получите бесплатную воду.</p>
+                <p class="triangle"></p>
+            </div>
+
+
+        </div>
+        <p style="text-align: center;margin: 15px 0;">ПОДЕЛИТЕСЬ КОДОМ: <strong>{{userPromoCode}} </strong></p>
+        <ul class="social-icons">
+            <li ng-click="share('vk')"><img alt="icon" src="common/img/_oldvk_logo.svg">
+                <p>Vkontakte</p>
+            </li>
+            <li ng-click="share('wp')"><img alt="icon" src="common/img/whatsUp_logo.svg">
+                <p>WhatsApp</p>
+            </li>
+            <li ui-sref="tabsController.contact_book"><img alt="icon" src="common/img/contact_logo.svg">
+                <p>Contacts</p>
+            </li>
+
+
+        </ul>
+    </ion-content>
+
+    <div login ng-hide="$root.isLogged"></div>
+</ion-view>
+
+
+<!--<ion-view title="Пригласи друга" id="page10">-->
+<!--<ion-content ng-show="$root.isLogged" padding="true" class="has-header">-->
+<!--<h2 id="page10-heading3" style="color:#000000;">Условия акции</h2>-->
+<!--<div id="page10-markdown5" style="color:#000000;">-->
+<!--<p>Вы можете отправить промокод-->
+<!--<strong>{{userPromoCode}} </strong> любому человеку из вашей телефонной книги. Вы и приглашенный человек получаете-->
+<!--бесплатную замену баллона при первом заказе. Акция действительна только для новых клиентов которых вы-->
+<!--приглашаете.</p>-->
+<!--</div>-->
+<!--<h2 id="page10-heading4" style="color:#000000;">Отправить смс с промо-кодом</h2>-->
+<!--<button id="page10-button16" class="button button-positive  button-block"-->
+<!--ng-click="sendPromoForFriendPreload()">Подарить друзьям воду-->
+<!--</button>-->
+<!--<div ng-show="confirm">-->
+<!--<div id="page10-markdown13" style="color:#000000;">-->
+<!--<p>Всем выбранным контактам будет отправлено смс с промо кодом. Подтвердить?</p>-->
+<!--</div>-->
+<!--<button id="page10-button17" class="button button-positive  button-block" ng-click="sendSMS()">Отправить-->
+<!--</button>-->
+<!--</div>-->
+<!--<form id="page10-form3" class="list">-->
+<!--<label class="item item-input item-stacked-label" id="page10-input7">-->
+<!--<span class="input-label">Контакты</span>-->
+<!--<input type="text" placeholder="Поиск..." ng-model="textSearch">-->
+<!--</label>-->
+<!--<ion-list id="page10-list3">-->
+<!--<ion-item data-checked="false" class=" item-icon-right"-->
+<!--ng-click="checkContact(this.contact.phones[0], this)" ng-repeat="contact in contacts| filter:textSearch">-->
+<!--{{contact.name}}-->
+<!--<i data-number="{{contact.phones[0]}}" class=" contact icon ion-android-checkbox-outline-blank"></i>-->
+<!--</ion-item>-->
+<!--</ion-list>-->
+<!--</form>-->
+<!--</ion-content>-->
+<!--<div login ng-hide="$root.isLogged"></div>-->
+<!--</ion-view>-->
+

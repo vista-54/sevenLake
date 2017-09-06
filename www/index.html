@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCn8GXpzSl3E2ejbcNNKdJ8DEdYGAvQJlg"
+            async defer></script>
+    <!--<link rel="manifest" href="manifest.json">-->
+
+    <!-- un-comment this code to enable service worker
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('service-worker.js')
+          .then(() => console.log('service worker installed'))
+          .catch(err => console.log('Error', err));
+      }
+    </script>-->
+
+
+
+    <link rel="stylesheet" href="common/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="common/css/font-awesome.css" rel="stylesheet">
+    <link href="common/lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="common/css/style.css" rel="stylesheet">
+    <link href="common/css/ionic.app.css" rel="stylesheet">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+    <script src="cordova.js"></script>
+    <!-- ionic/angularjs js -->
+    <script src="common/lib/ionic/js/ionic.bundle.js"></script>
+    <script src="common/lib/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="common/lib/ngstorage/ngStorage.min.js"></script>
+    <script src="common/lib/ngCordova/dist/ng-cordova.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <!--<script src="cordova.js"></script>-->
+
+    <!-- your app's js -->
+    <script src="js/app/app.js"></script>
+    <script src="js/app/config.js"></script>
+    <script src="common/factories/entry.js"></script>
+    <script src="common/factories/url.js"></script>
+    <script src="common/factories/user.js"></script>
+    <script src="common/services/request.js"></script>
+    <script src="common/directives/login/login.js"></script>
+    <script src="common/directives/login/loginCtrl.js"></script>
+    <script src="common/directives/address/address.js"></script>
+    <script src="common/directives/address/addressCtrl.js"></script>
+
+
+    <!--controllers-->
+    <script src="js/app/contact/contactCtrl.js"></script>
+    <script src="js/app/order/orderModel.js?v=2"></script>
+    <script src="js/app/order/orderCtrl.js"></script>
+    <script src="js/app/order/step1.js"></script>
+    <script src="js/app/order/step2.js"></script>
+    <script src="js/app/order/step3.js"></script>
+    <script src="js/app/order/step4.js"></script>
+    <script src="js/app/order/stepsModel.js"></script>
+    <script src="js/app/profile/profileCtrl.js"></script>
+    <script src="js/app/profile/profileModel.js"></script>
+
+    <script src="js/app/invite/inviteCtrl.js"></script>
+    <script src="js/app/invite/contactListCtrl.js"></script>
+    <script src="js/app/invite/inviteModel.js"></script>
+
+    <!--directives-->
+    <script src="common/directives/header/header.js"></script>
+    <script src="common/directives/rating/rating.js"></script>
+    <script src="common/directives/rating/ratingCtrl.js"></script>
+</head>
+<body ng-app="app" animation="slide-left-right-ios7">
+<div>
+    <div>
+        <ion-nav-bar class="bar-stable headerIcon">
+            <ion-nav-back-button></ion-nav-back-button>
+        </ion-nav-bar>
+        <ion-nav-view></ion-nav-view>
+    </div>
+</div>
+</body>
+</html>

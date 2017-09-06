@@ -1,0 +1,45 @@
+<ion-view title="Заказ воды" hide-back-button="true" id="page3">
+    <ion-content padding="true" class="manual-remove-top-padding has-header" ng-style="cartIsNotEmpty?{'bottom': '85px'}:{'bottom':'0px'}">
+        <div style="margin-left: -10px; width: calc(100% + 20px);">
+            <a style="display:block;" ui-sref="tabsController.invite">
+                <img src="common/img/YJTS2LoQA2dvb7lCMOoQ_bannerold.jpg" width="100%" height="auto"
+                     style="display: block; margin-left: auto; margin-right: auto;">
+            </a>
+        </div>
+        <div style="margin-right:-20px;">
+            <a ui-sref="tabsController.invite" id="page3-button7" style="left:-10px;"
+               class="button button-positive  button-full button-clear">Подари воду друзьям</a>
+        </div>
+        <ion-list id="page3-list2" class="manual-list-fullwidth">
+            <ion-item class="item-avatar item-icon-right positive" id="page3-list-item8" ng-repeat="order in orders">
+                <img src="{{order.image}}">
+                <h2positive>{{order.name}}
+
+                    <p>{{order.volume}}   {{order.freeCount>0?'бесплатно ('+order.freeCount+')':order.price+' руб.'}} </p>
+                    <i class="icon icon-countCart">{{order.inCartCount==0?'':order.inCartCount}}</i>
+                    <i class="icon ion-minus-round icon-semirigth" ng-click="removeOrder({{order.id}})"></i>
+                    <i class="icon ion-plus-round" ng-click="addOrder({{order.id}})"></i>
+
+                </h2positive>
+            </ion-item>
+
+        </ion-list>
+
+
+    </ion-content>
+
+    <div ng-if="cartIsNotEmpty" style="position: fixed;
+    bottom: 0;
+    width: 100%;">
+        <div  style="margin-right:-20px;">
+            <a ng-click="confirmOrder()" id="page3-button1" style="left:-10px;border-radius:0px 0px 0px 0px;"
+               class="button button-positive  button-full">Оформить заказ {{price}} руб.</a>
+        </div>
+        <div  style="margin-right:-20px;">
+            <a id="clearCart" style="left:-10px;border-radius:0px 0px 0px 0px;"
+               class="button button-light  button-full" ng-click="clearCart()">Очистить корзину</a>
+        </div>
+    </div>
+</ion-view>
+
+

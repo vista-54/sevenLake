@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<widget id="com.svm.sevenlakes" version="1.1.2" xmlns:gap="http://phonegap.com/ns/1.0"
+        xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>7 Озер</name>
+    <description>
+        An Ionic Framework and Cordova project.
+    </description>
+    <author email="you@example.com" href="http://example.com.com/">
+        Your Name Here
+    </author>
+    <plugin name="cordova-plugin-whitelist" version="1"/>
+    <plugin spec="https://github.com/apache/cordova-plugin-contacts.git" source="git"/>
+    <plugin spec="https://github.com/dpa99c/cordova-custom-config.git" source="git"/>
+    <plugin spec="https://github.com/cordova-sms/cordova-sms-plugin.git" source="git"/>
+    <plugin spec="https://github.com/vista-54/socialSharing.git" source="git"/>
+    <plugin spec="https://github.com/apache/cordova-plugin-dialogs.git" source="git"/>
+    <!--<plugin spec="https://github.com/apache/cordova-plugin-splashscreen.git" source="git"/>-->
+    <!--<plugin spec="https://github.com/apache/cordova-plugin-statusbar.git" source="git"/>-->
+    <!--<plugin spec="https://github.com/EddyVerbruggen/SocialSharing-PhoneGap-Plugin.git" source="git"/>-->
+    <!--<plugin spec="https://github.com/EddyVerbruggen/cordova-plugin-actionsheet.git" source="git"/>-->
+    <!--<plugin spec="https://github.com/Ajaxy/cordova-plugin-socialvk.git" source="git"/>-->
+    <!--<feature name="SocialVk">-->
+    <!--<param name="VK_APP_ID" value="5698267"/>-->
+    <!--</feature>-->
+    <!--<gap:plugin name="cordova-plugin-socialsharing" source="npm" />-->
+    <plugin spec="https://github.com/apache/cordova-plugin-geolocation.git" source="git"/>
+    <content src="index.html"/>
+    <access origin="*"/>
+    <!--<preference name="StatusBarOverlaysWebView" value="false" />-->
+    <!--<preference name="StatusBarBackgroundColor" value="#000000" />-->
+    <!--<preference name="StatusBarStyle" value="lightcontent" />-->
+    <!--<preference name="FadeSplashScreenDuration" value="0"/>-->
+    <!--<preference name="SplashScreenDelay" value="none"/>-->
+    <preference name="android-minSdkVersion" value="14"/>
+    <preference name="android-targetSdkVersion" value="16"/>
+    <preference name="webviewbounce" value="false"/>
+    <preference name="UIWebViewBounce" value="false"/>
+    <preference name="DisallowOverscroll" value="true"/>
+    <preference name="android-minSdkVersion" value="16"/>
+    <preference name="BackupWebStorage" value="none"/>
+    <icon src="res/icon.png"/>
+    <feature name="SocialSharing">
+        <param name="ios-package" value="SocialSharing"/>
+    </feature>
+    <icon src="res/ios/icon_120.png" height="120" width="120"/>
+    <icon src="res/ios/icon_76.png" height="76" width="76"/>
+    <icon src="res/ios/icon_152.png" height="152" width="152"/>
+    <feature name="StatusBar">
+        <param name="ios-package" value="CDVStatusBar" onload="true"/>
+    </feature>
+    <feature name="Contacts">
+        <param name="android-package" value="org.apache.cordova.contacts.ContactManager"/>
+    </feature>
+
+    <preference name="SplashScreenDelay" value="3000"/>
+    <splash src="res/ios/splash_320_480.png" width="320" height="480"/>
+    <splash src="res/ios/splash_640_960.png" width="640" height="960"/>
+    <splash src="res/ios/splash_768_1024.png" width="768" height="1024"/>
+    <splash src="res/ios/splash_1536_2048.png" width="1536" height="2048"/>
+    <splash src="res/ios/splash_1024_768.png" width="1024" height="768"/>
+    <splash src="res/ios/splash_1536_2048.png" width="2048" height="1536"/>
+    <splash src="res/ios/splash_740_1136.png" width="640" height="1136"/>
+    <splash src="res/ios/splash_750_1334.png" width="750" height="1334"/>
+    <splash src="res/ios/splash_1242_2208.png" width="1242" height="2208"/>
+</widget>

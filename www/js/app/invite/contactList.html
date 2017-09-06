@@ -1,0 +1,24 @@
+<ion-view title="Пригласи друга" id="page10">
+    <ion-content ng-show="$root.isLogged" padding="true" class="has-header">
+
+        <button id="page10-button16" class="button button-positive  button-block"
+                ng-click="sendSMS()">Отправить
+        </button>
+
+        <form id="page10-form3" class="list">
+            <label class="item item-input item-stacked-label" id="page10-input7">
+                <span class="input-label">Контакты</span>
+                <input type="text" placeholder="Поиск..." ng-model="textSearch">
+            </label>
+            <ion-list id="page10-list3">
+                <ion-item data-checked="false" class=" item-icon-right"
+                          ng-click="checkContact(this.contact.phones[0], this)"
+                          ng-repeat="contact in contacts| filter:textSearch">
+                    {{contact.name}}
+                    <i data-number="{{contact.phones[0]}}" class=" contact icon ion-android-checkbox-outline-blank"></i>
+                </ion-item>
+            </ion-list>
+        </form>
+    </ion-content>
+
+</ion-view>
